@@ -17,7 +17,7 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 	size_t	i;
 
 	i = (s1 > s2) * (n - 1);
-	while (n > 0 && s1 != s2 && i < n)
+	while ((0 <= i) && (i < n) && (s1 != s2))
 	{
 		((char *)s1)[i] = ((char *)s2)[i];
 		i += (s1 < s2) - (s1 > s2);
