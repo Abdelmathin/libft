@@ -6,5 +6,5 @@ This project is your very first project as a student at 42. You will need to rec
      representation.
 
 ## ft_bzero:
-     The ft_bzero() function writes n zeroed bytes to the string s.  If n is zero, ft_bzero() does
-     nothing.
+     The ft_bzero() function writes n zeroed bytes to the string s.  If n is zero, ft_bzero()
+     does nothing.
