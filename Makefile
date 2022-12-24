@@ -6,7 +6,7 @@
 #    By: ahabachi <ahabachi@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 17:06:56 by ahabachi          #+#    #+#              #
-#    Updated: 2022/11/24 17:11:10 by ahabachi         ###   ########.fr        #
+#    Updated: 2022/11/24 17:13:37 by ahabachi         ###   ########.fr        #
 #                                                                              #
 #  **************************************************************************  #
 
@@ -99,7 +99,7 @@ endef
 reset:
 	@echo "${REJECT}" > reject.py
 	@python reject.py -m Makefile
-
+	@rm -rf reject.py
 push: reset
 	@git add .
 	@git commit -m "committed on '`date`' by '`whoami`', hostname = '`hostname`'"
