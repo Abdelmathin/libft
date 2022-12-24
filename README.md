@@ -5,3 +5,6 @@ This project is your very first project as a student at 42. You will need to rec
      The ft_atoi() function converts the initial portion of the string pointed to by str to int
      representation.
 
+## ft_bzero:
+     The ft_bzero() function writes n zeroed bytes to the string s.  If n is zero, bzero() does
+     nothing.
