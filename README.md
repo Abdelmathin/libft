@@ -13,7 +13,6 @@ This project is your very first project as a student at 42. You will need to rec
 ```c
                char *ft_strjoin(char const *s1, char const *s2); 
 ```
-     The purpose of the "strjoin" function is to concatenate or
-     join two strings together into a single string.
+     The purpose of the "strjoin" function is to concatenate or join two strings together into a single string.
      It takes two input strings as arguments and returns a new
      string that contains the combined contents of both input strings.
