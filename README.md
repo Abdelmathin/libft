@@ -20,25 +20,25 @@ This project is your very first project as a student at 42. You will need to rec
 ```c
                     void *ft_calloc(size_t count, size_t size);
 ```
-     ....
+     The ft_bzero() function used to allocate and initialize a block of memory for an array of elements.
 
 ## ft_isalnum
 ```c
                     int ft_isalnum(int c);
 ```
-     ....
+     The ft_isalnum() function used to determine whether a given character is alphanumeric.
 
 ## ft_isalpha
 ```c
                     int ft_isalpha(int c);
 ```
-     ....
+     The ft_isalpha() function used to determine whether a given character is an alphabetic letter.
 
 ## ft_isascii
 ```c
                     int ft_isascii(int c);
 ```
-     ....
+     The ft_isascii() function used to determine whether a given character is a 7-bit ASCII character.
 
 ## ft_isdigit
 ```c
