@@ -15,5 +15,6 @@ This project is your very first project as a student at 42. You will need to rec
 ```
      The purpose of the "ft_strjoin" function is to concatenate or join two strings together into
      a single string.
+
      It takes two input strings as arguments and returns a new string that contains the
      combined contents of both input strings.
