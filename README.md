@@ -246,7 +246,20 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 ```c
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 ```
-     ....
+     The ft_strnstr() function locates the first occurrence of the null-terminated string
+     `needle` in the null-terminatedstring `haystack`.
+
+     The `haystack` argument is a pointer to the null-terminated string in which you want to
+     search for the substring.
+
+     The `needle` argument is a pointer to the null-terminated
+     substring you want to find.
+
+     The `len` (haystack_len) argument specifies the maximum length within which to search
+     for the substring.
+
+     The return value of ft_strnstr is a pointer to the first occurrence of the substring
+     within the specified length of the string, or NULL if the substring is not found.
 
 ## ft_strrchr
 ```c
