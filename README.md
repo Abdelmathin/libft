@@ -231,7 +231,10 @@ char *ft_strdup(const char *s1);
 ```c
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
 ```
-     ....
+    The ft_striteri function applies the function ’f’ on each character of the string passed as
+    argument, passing its index as first argument.
+
+    Each character is passed by address to ’f’ to be modified if necessary.
 
 ## ft_strjoin
 ```c
@@ -247,7 +250,32 @@ char *ft_strjoin(char const *s1, char const *s2);
 ```c
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
 ```
-     ....
+    The ft_strlcat function takes three arguments: the pointer to the destination buffer dst,
+    the pointer to the source string src, and the size of the destination buffer dstsize.
+
+    It determines the lengths of the destination and source strings using strlen.
+
+    It then calculates the total length if both strings were concatenated.
+
+    The function checks if the length of the destination string (dst_len) is greater than or
+    equal to the dstsize.
+
+    If so, it returns dstsize + src_len to indicate that the entire source string could not
+    be appended.
+
+    If the total length is greater than dstsize, it means the destination buffer is not large
+    enough to hold the complete concatenated string.
+
+    In this case, it calculates the number of characters that can be safely copied (copy_len)
+    and copies that many characters from src to dst, ensuring that the destination string
+    is null-terminated.
+
+    If the total length is within the dstsize limit, it means the destination buffer has enough
+    space to hold the complete concatenated string. In this case, it copies the entire src string
+    to the end of dst and adds a null terminator.
+
+    The function returns the total length of the concatenated string, which would have been
+    produced if the destination buffer were large enough to accommodate the entire source string.
 
 ## ft_strlcpy
 ```c
@@ -278,7 +306,9 @@ size_t ft_strlen(const char *s);
 ```c
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 ```
-     ....
+    The ft_strmapi() function applies the function ’f’ to each character of the string ’s’, and
+    passing its index as first argument to create a new string (with malloc(3)) resulting from
+    successive applications of ’f’.
 
 ## ft_strncmp
 ```c
@@ -332,7 +362,8 @@ char *ft_strrchr(const char *s, int c);
 ```c
 char *ft_strtrim(char const *s1, char const *set);
 ```
-     ....
+     The ft_strtrim() function allocates (with malloc(3)) and returns a copy of ’s1’ with the
+    characters specified in ’set’ removed from the beginning and the end of the string.
 
 ## ft_substr
 ```c
