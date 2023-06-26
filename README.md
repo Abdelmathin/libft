@@ -44,13 +44,41 @@ int ft_isascii(int c);
 ```c
 int ft_isdigit(int c);
 ```
-     ....
+     The ft_isdigit() function tests for a decimal digit character.  Regardless of locale,
+     this includes the following characters only
+          
+          ``0''         ``1''         ``2''         ``3''         ``4''
+          ``5''         ``6''         ``7''         ``8''         ``9''
 
 ## ft_isprint
 ```c
 int ft_isprint(int c);
 ```
-     ....
+     The ft_isprint() function tests for any printing character, including space (` ').
+     The value of the argument must be representable as an unsigned char or the value of EOF.
+
+     In the ASCII character set, this includes the following characters
+     (preceded by their numeric values, in octal):
+
+     040 sp        041 ``!''     042 ``"''     043 ``#''     044 ``$''
+     045 ``%''     046 ``&''     047 ``'''     050 ``(''     051 ``)''
+     052 ``*''     053 ``+''     054 ``,''     055 ``-''     056 ``.''
+     057 ``/''     060 ``0''     061 ``1''     062 ``2''     063 ``3''
+     064 ``4''     065 ``5''     066 ``6''     067 ``7''     070 ``8''
+     071 ``9''     072 ``:''     073 ``;''     074 ``<''     075 ``=''
+     076 ``>''     077 ``?''     100 ``@''     101 ``A''     102 ``B''
+     103 ``C''     104 ``D''     105 ``E''     106 ``F''     107 ``G''
+     110 ``H''     111 ``I''     112 ``J''     113 ``K''     114 ``L''
+     115 ``M''     116 ``N''     117 ``O''     120 ``P''     121 ``Q''
+     122 ``R''     123 ``S''     124 ``T''     125 ``U''     126 ``V''
+     127 ``W''     130 ``X''     131 ``Y''     132 ``Z''     133 ``[''
+     134 ``\''     135 ``]''     136 ``^''     137 ``_''     140 ```''
+     141 ``a''     142 ``b''     143 ``c''     144 ``d''     145 ``e''
+     146 ``f''     147 ``g''     150 ``h''     151 ``i''     152 ``j''
+     153 ``k''     154 ``l''     155 ``m''     156 ``n''     157 ``o''
+     160 ``p''     161 ``q''     162 ``r''     163 ``s''     164 ``t''
+     165 ``u''     166 ``v''     167 ``w''     170 ``x''     171 ``y''
+     172 ``z''     173 ``{''     174 ``|''     175 ``}''     176 ``~''
 
 ## ft_itoa
 ```c
@@ -270,7 +298,8 @@ char *ft_strrchr(const char *s, int c);
      The terminating null character is considered to be part of the string; therefore if c is `\0',
      the functions locate the terminating `\0'.
 
-     The `s` argument is a pointer to the null-terminated string in which you want to search for the character.
+     The `s` argument is a pointer to the null-terminated string in which you want to search for
+     the character.
 
      The `c` argument is the specific character you want to find.
 
