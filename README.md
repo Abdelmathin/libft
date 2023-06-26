@@ -166,7 +166,8 @@ void ft_putnbr_fd(int n, int fd);
      The ft_putnbr_fd function takes two arguments: the integer n to be written and the file
      descriptor fd to which the integer will be written.
 
-     It recursively writes each digit of the integer as a character by dividing the number by 10 and converting the remainder to a character.
+     It recursively writes each digit of the integer as a character by dividing the number by 10
+     and converting the remainder to a character.
 
      It handles negative numbers by writing a '-' character and then processing the absolute value
      of the number.
@@ -178,7 +179,8 @@ void ft_putstr_fd(const char *s, int fd);
      The ft_putstr_fd function takes two arguments: the pointer to the null-terminated string s
      to be written and the file descriptor fd to which the string will be written.
 
-     It iterates over each character of the string and uses the `write` function to write each character to the specified file descriptor.
+     It iterates over each character of the string and uses the `write` function to write each
+     character to the specified file descriptor.
 
 ## ft_split
 ```c
@@ -199,7 +201,8 @@ char *ft_strchr(const char *s, int c);
      The ft_strchr function takes two arguments: the pointer to the string s to be searched
      and the integer c representing the character to search for.
 
-     It iterates over the string character by character until it finds a match with the specified character or reaches the end of the string.
+     It iterates over the string character by character until it finds a match with the specified
+     character or reaches the end of the string.
 
      If a match is found, it returns a pointer to the character. If the character is not found, it returns NULL.
 
@@ -245,7 +248,14 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
 ```c
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
 ```
-     ....
+     The ft_strlcpy function takes three arguments: the pointer to the destination buffer dst,
+     the pointer to the source string src, and the size of the destination buffer dstsize.
+
+     If dstsize is greater than 0, it checks if the source string length exceeds the destination
+     buffer size.
+
+     If it does, the copy length is adjusted to dstsize - 1 to leave room for the null terminator.
+     It copies characters from src to dst, and adds a null terminator at the appropriate position in dst.
 
 ## ft_strlen
 ```c
