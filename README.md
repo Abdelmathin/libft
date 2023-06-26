@@ -108,31 +108,46 @@ void *ft_memchr(const void *s, int c, size_t n);
 ```c
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 ```
-     ....
+     The ft_memcmp() function compares byte string s1 against byte string s2.
+
+     Both strings are assumed to be n bytes long.
 
 ## ft_memcpy
 ```c
 void *ft_memcpy(void *dst, const void *src, size_t n);
 ```
-     ....
+     The ft_memcpy() function copies n bytes from memory area `src` to memory area `dst`.
+
+     If `dst` and `src` overlap, behavior is undefined.
+
+     Applications in which dst and src might overlap should use ft_memmove instead.
 
 ## ft_memmove
 ```c
 void *ft_memmove(void *s1, const void *s2, size_t n);
 ```
-     ....
+     The ft_memmove() function copies len bytes from string src to string dst.
+     The two strings may overlap; the copy is always done in a non-destructive manner.
 
 ## ft_memset
 ```c
 void *ft_memset(void *b, int c, size_t len);
 ```
-     ....
+     The ft_memset() function writes len bytes of value c (converted to an unsigned char)
+     to the string b.
 
 ## ft_putchar_fd
 ```c
 void ft_putchar_fd(char c, int fd);
 ```
-     ....
+     The ft_putchar_fd function takes two arguments: the character c to be written and the file
+     descriptor fd to which the character will be written.
+     It uses the write system call from the <unistd.h> header to perform the actual
+     write operation.
+
+     The write function takes the file descriptor, a pointer to the data to be written
+     (&c in this case), and the number of bytes to write
+     (1 in this case, since we are writing a single character).
 
 ## ft_putendl_fd
 ```c
