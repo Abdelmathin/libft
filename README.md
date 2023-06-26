@@ -456,4 +456,4 @@ t_list *ft_lstnew(void *content);
 ```c
 int ft_lstsize(t_list *lst);
 ```
-     The ft_lstsize() function returns the last node of the list.
+     The ft_lstsize() function counts the number of nodes in a list.
