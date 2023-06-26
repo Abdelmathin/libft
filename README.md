@@ -249,8 +249,8 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len);
      The ft_strnstr() function locates the first occurrence of the null-terminated string `needle`
      in the null-terminatedstring `haystack`.
 
-     The `haystack` argument is a pointer to the null-terminated string in which you want to search for
-     the substring.
+     The `haystack` argument is a pointer to the null-terminated string in which you want to search
+     for the substring.
 
      The `needle` argument is a pointer to the null-terminated substring you want to find.
 
@@ -264,7 +264,18 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 ```c
 char *ft_strrchr(const char *s, int c);
 ```
-     ....
+     The ft_strrchr() function locates the last occurrence of c (converted to a char) in the string
+     pointed to by s. 
+
+     The terminating null character is considered to be part of the string; therefore if c is `\0',
+     the functions locate the terminating `\0'.
+
+     The `s` argument is a pointer to the null-terminated string in which you want to search for the character.
+
+     The `c` argument is the specific character you want to find.
+
+     The return value of ft_strrchr is a pointer to the last occurrence of the specified character
+     within the string, or NULL if the character is not found.
 
 ## ft_strtrim
 ```c
