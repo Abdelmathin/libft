@@ -53,7 +53,10 @@ int ft_isdigit(int c);
 
 ## ft_isprint
 ```c
-int ft_isprint(int c);
+int ft_isprint(int c)
+{
+    return (32 <= c && c <= 126);
+}
 ```
     The ft_isprint() function tests for any printing character, including space (` ').
     The value of the argument must be representable as an unsigned char or the value of EOF.
@@ -205,7 +208,8 @@ char *ft_strchr(const char *s, int c);
     It iterates over the string character by character until it finds a match with the specified
     character or reaches the end of the string.
 
-    If a match is found, it returns a pointer to the character. If the character is not found, it returns NULL.
+    If a match is found, it returns a pointer to the character. If the character is not found,
+    it returns NULL.
 
 ## ft_strdup
 ```c
