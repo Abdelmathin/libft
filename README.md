@@ -216,7 +216,13 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
 ```c
 size_t ft_strlen(const char *s);
 ```
-     ....
+     The ft_strlen() function computes the length of the string s.
+
+     This function takes a pointer to a null-terminated string as its argument and returns
+     the number of characters in that string, excluding the null character ('\0') at the end.
+
+     The function scans the string character by character until it reaches the null character
+     and then returns the count.
 
 ## ft_strmapi
 ```c
@@ -228,7 +234,13 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 ```c
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 ```
-     ....
+     The ft_strncmp() function compares not more than n characters.
+
+     Because ft_strncmp() is designed for comparing strings rather than binary data,
+     characters that appear after a `\0' character are not compared.
+
+     The function ft_strncmp takes three arguments: two pointers to null-terminated strings
+     and an integer n that specifies the maximum number of characters to compare.
 
 ## ft_strnstr
 ```c
