@@ -362,26 +362,33 @@ char *ft_strrchr(const char *s, int c);
 ```c
 char *ft_strtrim(char const *s1, char const *set);
 ```
-     The ft_strtrim() function allocates (with malloc(3)) and returns a copy of ’s1’ with the
+    The ft_strtrim() function allocates (with malloc(3)) and returns a copy of ’s1’ with the
     characters specified in ’set’ removed from the beginning and the end of the string.
 
 ## ft_substr
 ```c
 char *ft_substr(char const *s, unsigned int start, size_t len);
 ```
-     ....
+    The ft_substr() function allocates (with malloc(3)) and returns a substring from the string ’s’.
+    The substring begins at index ’start’ and is of maximum size ’len’.
+
+    The ft_substr function takes three arguments: the pointer to the string s from which
+    the substring should be extracted, the starting index start indicating the position in s
+    to begin the substring, and the length len of the substring to extract.
 
 ## ft_tolower
 ```c
 int ft_tolower(int c);
 ```
-     ....
+    The ft_tolower() function converts an upper-case letter to the corresponding lower-case letter.
+    The argument must be representable as an unsigned char or the value of EOF.
 
 ## ft_toupper
 ```c
 int ft_toupper(int c);
 ```
-     ....
+    The toupper() function converts a lower-case letter to the corresponding upper-case letter.
+    The argument must be representable as an unsigned char or the value of EOF.
 
 ## ft_lstadd_back_bonus
 ```c
