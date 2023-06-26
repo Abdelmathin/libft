@@ -390,56 +390,70 @@ int ft_toupper(int c);
     The toupper() function converts a lower-case letter to the corresponding upper-case letter.
     The argument must be representable as an unsigned char or the value of EOF.
 
-## ft_lstadd_back_bonus
+## ft_lstadd_back
 ```c
 void ft_lstadd_back(t_list **lst, t_list *new);
 ```
-     ....
+     The ft_lstadd_back() function adds the node ’new’ at the end of the list.
 
-## ft_lstadd_front_bonus
+## ft_lstadd_front
 ```c
 void ft_lstadd_front(t_list **lst, t_list *new);
 ```
-     ....
+     The ft_lstadd_back() function adds the node ’new’ at the beginning of the list.
 
-## ft_lstclear_bonus
+## ft_lstclear
 ```c
 void ft_lstclear(t_list **lst, void (*del)(void*));
 ```
-     ....
+    The ft_lstclear() function deletes and frees the given node and every successor of that node,
+    using the function ’del’ and free(3).
 
-## ft_lstdelone_bonus
+    Finally, the pointer to the list must be set to NULL.
+
+## ft_lstdelone
 ```c
 void ft_lstdelone(t_list *lst, void (*del)(void*));
 ```
-     ....
+    The ft_lstdelone() function takes as a parameter a node and frees the memory of the node’s
+    content using the function ’del’ given as a parameter and free the node.
 
-## ft_lstiter_bonus
+    The memory of ’next’ must not be freed.
+
+## ft_lstiter
 ```c
 void ft_lstiter(t_list *lst, void (*f)(void *));
 ```
-     ....
+     The ft_lstiter() function iterates the list ’lst’ and applies the function ’f’ on the
+     content of each node.
 
-## ft_lstlast_bonus
+## ft_lstlast
 ```c
 t_list *ft_lstlast(t_list *lst);
 ```
-     ....
+     The ft_lstlast() function returns the last node of the list
 
-## ft_lstmap_bonus
+## ft_lstmap
 ```c
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 ```
-     ....
+    The ft_lstmap() function iterates the list ’lst’ and applies the function ’f’ on the content
+    of each node. Creates a new list resulting of the successive applications of the function ’f’.
 
-## ft_lstnew_bonus
+    The ’del’ function is used to delete the content of a node if needed.
+
+## ft_lstnew
 ```c
 t_list *ft_lstnew(void *content);
 ```
-     ....
+    The ft_lstnew() function allocates (with malloc(3)) and returns a new node.
 
-## ft_lstsize_bonus
+    The member variable ’content’ is initialized with the value of the parameter ’content’.
+
+    The variable ’next’ is initialized to NULL.
+
+## ft_lstsize
 ```c
 int ft_lstsize(t_list *lst);
 ```
-     ....
+     The ft_lstsize() function returns the last node of the list.
