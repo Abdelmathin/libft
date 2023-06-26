@@ -153,37 +153,71 @@ void ft_putchar_fd(char c, int fd);
 ```c
 void ft_putendl_fd(const char *s, int fd);
 ```
-     ....
+     The ft_putendl_fd function takes two arguments: the pointer to the null-terminated string s
+     to be written and the file descriptor fd to which the string will be written.
+
+     It uses the write system call from the <unistd.h> header to perform the actual write
+     operation.
 
 ## ft_putnbr_fd
 ```c
 void ft_putnbr_fd(int n, int fd);
 ```
-     ....
+     The ft_putnbr_fd function takes two arguments: the integer n to be written and the file
+     descriptor fd to which the integer will be written.
+
+     It recursively writes each digit of the integer as a character by dividing the number by 10 and converting the remainder to a character.
+
+     It handles negative numbers by writing a '-' character and then processing the absolute value
+     of the number.
 
 ## ft_putstr_fd
 ```c
 void ft_putstr_fd(const char *s, int fd);
 ```
-     ....
+     The ft_putstr_fd function takes two arguments: the pointer to the null-terminated string s
+     to be written and the file descriptor fd to which the string will be written.
+
+     It iterates over each character of the string and uses the `write` function to write each character to the specified file descriptor.
 
 ## ft_split
 ```c
-static int my_spliter(char **ret, char const *s, char c);
+char **ft_split(char const *s, char c);
 ```
-     ....
+     The ft_split function takes two arguments: the string s to be split and
+     the delimiter character c.
+
+     It first counts the number of words in the string by iterating over it and detecting
+     transitions from delimiter characters to non-delimiter characters.
+
+     Then, it allocates memory for an array of strings (char **) to store the resulting substrings.
 
 ## ft_strchr
 ```c
 char *ft_strchr(const char *s, int c);
 ```
-     ....
+     The ft_strchr function takes two arguments: the pointer to the string s to be searched
+     and the integer c representing the character to search for.
+
+     It iterates over the string character by character until it finds a match with the specified character or reaches the end of the string.
+
+     If a match is found, it returns a pointer to the character. If the character is not found, it returns NULL.
 
 ## ft_strdup
 ```c
 char *ft_strdup(const char *s1);
 ```
-     ....
+     The ft_strdup function takes a single argument: the pointer to the string s1 to be duplicated.
+
+     It determines the length of the string using ft_strlen and adds 1 to account for the null
+     terminator.
+
+     It then allocates memory for the duplicate string using ft_calloc.
+
+     If the memory allocation is successful, it uses ft_memmove to copy the contents of s1 into
+     the newly allocated memory.
+
+     Finally, it returns a pointer to the duplicate string.
 
 ## ft_striteri
 ```c
