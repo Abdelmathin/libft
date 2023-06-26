@@ -60,7 +60,7 @@ int ft_isprint(int c);
      In the ASCII character set, this includes the following characters
      (preceded by their numeric values, in octal):
 
-     040 sp        041 ``!''     042 ``"''     043 ``#''     044 ``$''
+     040 space     041 ``!''     042 ``"''     043 ``#''     044 ``$''
      045 ``%''     046 ``&''     047 ``'''     050 ``(''     051 ``)''
      052 ``*''     053 ``+''     054 ``,''     055 ``-''     056 ``.''
      057 ``/''     060 ``0''     061 ``1''     062 ``2''     063 ``3''
@@ -84,67 +84,25 @@ int ft_isprint(int c);
 ```c
 char *ft_itoa(int n);
 ```
-     ....
-
-## ft_lstadd_back_bonus
-```c
-void ft_lstadd_back(t_list **lst, t_list *new);
-```
-     ....
-
-## ft_lstadd_front_bonus
-```c
-void ft_lstadd_front(t_list **lst, t_list *new);
-```
-     ....
-
-## ft_lstclear_bonus
-```c
-void ft_lstclear(t_list **lst, void (*del)(void*));
-```
-     ....
-
-## ft_lstdelone_bonus
-```c
-void ft_lstdelone(t_list *lst, void (*del)(void*));
-```
-     ....
-
-## ft_lstiter_bonus
-```c
-void ft_lstiter(t_list *lst, void (*f)(void *));
-```
-     ....
-
-## ft_lstlast_bonus
-```c
-t_list *ft_lstlast(t_list *lst);
-```
-     ....
-
-## ft_lstmap_bonus
-```c
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-```
-     ....
-
-## ft_lstnew_bonus
-```c
-t_list *ft_lstnew(void *content);
-```
-     ....
-
-## ft_lstsize_bonus
-```c
-int ft_lstsize(t_list *lst);
-```
-     ....
+     The function ft_itoa takes an integer n as its argument and returns a pointer to a dynamically
+     allocated character array containing the string representation of the integer.
 
 ## ft_memchr
 ```c
 void *ft_memchr(const void *s, int c, size_t n);
 ```
-     ....
+     The ft_memchr() function locates the first occurrence of c (converted to an unsigned char)
+     in string s.
+
+     The `s` argument is a pointer to the block of memory in which you want to search
+     for the byte value.
+
+     The `c` argument is the specific byte value you want to find.
+
+     The `n` argument specifies the number of bytes to search.
+
+     The return value of ft_memchr is a void pointer to the first occurrence of the byte value
+     within the specified block of memory, or NULL if the byte value is not found.
 
 ## ft_memcmp
 ```c
@@ -327,5 +285,59 @@ int ft_tolower(int c);
 ## ft_toupper
 ```c
 int ft_toupper(int c);
+```
+     ....
+
+## ft_lstadd_back_bonus
+```c
+void ft_lstadd_back(t_list **lst, t_list *new);
+```
+     ....
+
+## ft_lstadd_front_bonus
+```c
+void ft_lstadd_front(t_list **lst, t_list *new);
+```
+     ....
+
+## ft_lstclear_bonus
+```c
+void ft_lstclear(t_list **lst, void (*del)(void*));
+```
+     ....
+
+## ft_lstdelone_bonus
+```c
+void ft_lstdelone(t_list *lst, void (*del)(void*));
+```
+     ....
+
+## ft_lstiter_bonus
+```c
+void ft_lstiter(t_list *lst, void (*f)(void *));
+```
+     ....
+
+## ft_lstlast_bonus
+```c
+t_list *ft_lstlast(t_list *lst);
+```
+     ....
+
+## ft_lstmap_bonus
+```c
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+```
+     ....
+
+## ft_lstnew_bonus
+```c
+t_list *ft_lstnew(void *content);
+```
+     ....
+
+## ft_lstsize_bonus
+```c
+int ft_lstsize(t_list *lst);
 ```
      ....
